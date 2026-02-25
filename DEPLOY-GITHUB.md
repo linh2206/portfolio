@@ -5,33 +5,37 @@
 - ✅ Initial commit created
 - ✅ Remote `origin` → https://github.com/linh2206/portfolio.git
 
-## Next Steps
+## One-Command Setup (recommended)
+
+Run in terminal:
+
+```bash
+cd /Users/linh/portfolio
+gh auth login
+./setup-github.sh
+```
+
+This will authenticate with GitHub, create the repo, and push your code.
+
+## Manual Setup
 
 ### 1. Create repo on GitHub
 1. Go to [github.com/new](https://github.com/new)
-2. **Repository name:** `portfolio` (or another name if preferred)
+2. **Repository name:** `portfolio`
 3. Select **Public**
-4. **Do not** check "Add a README file" (already included)
+4. **Do not** check "Add a README file"
 5. Click **Create repository**
 
-### 2. Push code to GitHub
-If the repo name is `portfolio`:
+### 2. Push code
 ```bash
 cd /Users/linh/portfolio
 git push -u origin main
 ```
 
-If the repo has a different name, update the remote:
-```bash
-git remote set-url origin https://github.com/linh2206/YOUR-REPO-NAME.git
-git push -u origin main
-```
-
-### 3. Free deploy (Vercel)
-1. Go to [vercel.com](https://vercel.com) → Sign in with GitHub
-2. **Add New** → **Project** → Select `portfolio` repo
-3. Click **Deploy** (Next.js auto-detected)
-4. Done! You'll get a link like: `https://portfolio-xxx.vercel.app`
+### 3. Deploy on Vercel
+1. Go to [vercel.com/new](https://vercel.com/new)
+2. Import `linh2206/portfolio`
+3. Click **Deploy**
 
 ---
-After pushing, your portfolio will be at: **https://github.com/linh2206/portfolio**
+Result: **https://github.com/linh2206/portfolio**
