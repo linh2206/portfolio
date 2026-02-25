@@ -2,6 +2,7 @@
   "name": "le-hoai-linh-portfolio",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://linh2206.github.io/portfolio/",
   "author": "LE HOAI LINH",
   "engines": {
     "node": ">=20.9.0"

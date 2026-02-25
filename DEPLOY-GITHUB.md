@@ -1,41 +1,27 @@
-# Deploy Portfolio to GitHub
+# Deploy Portfolio to GitHub Pages
 
-## Done
-- ✅ Git initialized
-- ✅ Initial commit created
-- ✅ Remote `origin` → https://github.com/linh2206/portfolio.git
+## Live Portfolio
 
-## One-Command Setup (recommended)
+**https://linh2206.github.io/portfolio/**
 
-Run in terminal:
+The portfolio deploys automatically when you push to `main`. No build needed locally.
 
-```bash
-cd /Users/linh/portfolio
-gh auth login
-./setup-github.sh
+## First-time setup
+
+1. Go to repo **Settings** > **Pages**
+2. Under "Build and deployment", set **Source** to **GitHub Actions**
+3. Push to `main` - the workflow will deploy automatically
+
+## Show portfolio on GitHub Profile
+
+Create a repo named `linh2206` (same as your username) with a README.md:
+
+```markdown
+# Hi, I'm Le Hoai Linh
+
+## Full-stack Developer
+
+**View my portfolio:** [linh2206.github.io/portfolio](https://linh2206.github.io/portfolio/)
 ```
 
-This will authenticate with GitHub, create the repo, and push your code.
-
-## Manual Setup
-
-### 1. Create repo on GitHub
-1. Go to [github.com/new](https://github.com/new)
-2. **Repository name:** `portfolio`
-3. Select **Public**
-4. **Do not** check "Add a README file"
-5. Click **Create repository**
-
-### 2. Push code
-```bash
-cd /Users/linh/portfolio
-git push -u origin main
-```
-
-### 3. Deploy on Vercel
-1. Go to [vercel.com/new](https://vercel.com/new)
-2. Import `linh2206/portfolio`
-3. Click **Deploy**
-
----
-Result: **https://github.com/linh2206/portfolio**
+This README will appear on your profile when people visit github.com/linh2206.
