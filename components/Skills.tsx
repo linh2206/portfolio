@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 import AnimatedSection from './AnimatedSection'
 
 const skillCategories = [
-  { title: 'Languages', icon: '⚡', items: ['JavaScript', 'TypeScript', 'PHP', 'Python', 'Go'], color: 'from-indigo-500/20 to-blue-500/20' },
-  { title: 'Frontend', icon: '🎨', items: ['ReactJS', 'NextJS', 'Redux', 'Tailwind', 'Bootstrap', 'Ant Design', 'MUI'], color: 'from-purple-500/20 to-indigo-500/20' },
-  { title: 'Backend', icon: '⚙️', items: ['NodeJS', 'NestJS', 'Laravel', 'Express'], color: 'from-pink-500/20 to-purple-500/20' },
-  { title: 'Mobile', icon: '📱', items: ['Flutter', 'React Native'], color: 'from-cyan-500/20 to-blue-500/20' },
-  { title: 'Database', icon: '🗄️', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'], color: 'from-emerald-500/20 to-cyan-500/20' },
-  { title: 'DevOps', icon: '🚀', items: ['Docker', 'Jenkins', 'Bash', 'GitHub Actions', 'Grafana', 'AWS'], color: 'from-orange-500/20 to-pink-500/20' },
+  { title: 'Languages', icon: '⚡', items: ['JavaScript', 'TypeScript', 'PHP', 'Python', 'Go'], color: 'from-cyan-400 to-blue-500', border: 'hover:border-cyan-500/30' },
+  { title: 'Frontend', icon: '🎨', items: ['ReactJS', 'NextJS', 'Redux', 'Tailwind', 'Bootstrap', 'Ant Design', 'MUI'], color: 'from-violet-400 to-purple-500', border: 'hover:border-violet-500/30' },
+  { title: 'Backend', icon: '⚙️', items: ['NodeJS', 'NestJS', 'Laravel', 'Express'], color: 'from-pink-400 to-rose-500', border: 'hover:border-pink-500/30' },
+  { title: 'Mobile', icon: '📱', items: ['Flutter', 'React Native'], color: 'from-emerald-400 to-teal-500', border: 'hover:border-emerald-500/30' },
+  { title: 'Database', icon: '🗄️', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'], color: 'from-amber-400 to-orange-500', border: 'hover:border-amber-500/30' },
+  { title: 'DevOps', icon: '🚀', items: ['Docker', 'Jenkins', 'Bash', 'GitHub Actions', 'Grafana', 'AWS'], color: 'from-rose-400 to-pink-500', border: 'hover:border-rose-500/30' },
 ]
 
 export default function Skills() {
@@ -18,35 +18,31 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="section-title">
-            Skills
+            <span className="gradient-text-cool">Skills</span>
             <span className="section-line" />
           </h2>
-          <p className="text-slate-500 mb-16 max-w-2xl">
-            Technologies I work with to build modern, scalable applications.
-          </p>
+          <p className="text-slate-500 mb-16 max-w-2xl">Technologies I use to build modern, scalable applications.</p>
         </AnimatedSection>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {skillCategories.map((category, i) => (
+          {skillCategories.map((cat, i) => (
             <motion.div
-              key={category.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              key={cat.title}
+              initial={{ opacity: 0, y: 30, rotate: -1 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              whileHover={{ y: -3, scale: 1.01 }}
-              className="glass rounded-2xl overflow-hidden hover:border-indigo-500/20 transition-all duration-500 group hover:glow-sm"
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className={`glass rounded-2xl overflow-hidden card-glow rainbow-border transition-all duration-500 ${cat.border}`}
             >
-              <div className={`h-1 bg-gradient-to-r ${category.color}`} />
+              <div className={`h-1.5 bg-gradient-to-r ${cat.color}`} />
               <div className="p-6">
-                <h3 className="text-white font-semibold mb-4 flex items-center gap-2.5">
-                  <span className="text-lg">{category.icon}</span>
-                  {category.title}
+                <h3 className={`font-semibold mb-4 flex items-center gap-2.5 bg-gradient-to-r ${cat.color} bg-clip-text text-transparent`}>
+                  <span className="text-lg">{cat.icon}</span>
+                  {cat.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {category.items.map((skill) => (
-                    <span key={skill} className="tech-tag">{skill}</span>
-                  ))}
+                  {cat.items.map((skill) => <span key={skill} className="tech-tag">{skill}</span>)}
                 </div>
               </div>
             </motion.div>
