@@ -16,12 +16,10 @@ export default function Contact() {
             Say Hello
           </a>
           <a
-            href="https://www.facebook.com/linh.le.2206"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-4 border border-slate-600 text-slate-300 font-semibold rounded-lg hover:border-cyan-500 hover:text-cyan-400 transition-colors"
+            href="viber://chat?number=%2B84972645991"
+            className="px-8 py-4 border border-slate-600 text-slate-300 font-semibold rounded-lg hover:border-purple-500 hover:text-purple-400 transition-colors"
           >
-            Connect on Facebook
+            Chat on Viber
           </a>
         </div>
         <div className="mt-12 text-slate-500 text-sm">

@@ -19,8 +19,8 @@ export default function Hero() {
           Full-stack Developer
         </h2>
         <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-          3+ years building scalable systems across healthcare, education, 
-          e-commerce, and IoT. Passionate about creating impactful solutions.
+          4+ years building scalable systems across healthcare, education, 
+          e-commerce, media, and IoT. Passionate about creating impactful solutions.
         </p>
         <div className="flex flex-wrap gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.4s' }}>
           <a

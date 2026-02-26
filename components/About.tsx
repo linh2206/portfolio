@@ -9,8 +9,8 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-slate-400 leading-relaxed mb-4">
-              Full-stack Developer with <strong className="text-slate-300">3+ years of experience</strong> across 
-              healthcare, education, e-commerce, and IoT. Proficient in Node.js, Laravel, React.js, NestJS, Next.js. 
+              Full-stack Developer with <strong className="text-slate-300">4+ years of experience</strong> across 
+              healthcare, education, e-commerce, media, and IoT. Proficient in Node.js, Laravel, React.js, NestJS, Next.js. 
               Passionate about building scalable systems and learning new technologies such as Flutter and React Native.
             </p>
             <p className="text-slate-400 leading-relaxed">
