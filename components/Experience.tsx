@@ -42,23 +42,23 @@ export default function Experience() {
             {experiences.map((exp, i) => (
               <motion.div
                 key={exp.company}
-                initial={{ opacity: 0, x: -40 }}
+                initial={{ opacity: 0, x: -24 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.7, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
                 className="relative pl-12 md:pl-20"
               >
                 <motion.div
                   className="absolute left-[10px] md:left-[26px] top-6 w-3 h-3 rounded-full"
                   style={{ background: exp.dot, boxShadow: `0 0 12px ${exp.dot}60` }}
-                  whileInView={{ scale: [0, 1.3, 1] }}
+                  whileInView={{ scale: [0, 1.15, 1] }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.08 + 0.2 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 + 0.2, ease: [0.25, 0.1, 0.25, 1] }}
                 />
 
                 <motion.div
                   className="glass rounded-2xl overflow-hidden card-glow rainbow-border transition-all duration-500"
-                  whileHover={{ x: 4 }}
+                  whileHover={{ x: 4, transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }}
                 >
                   <div className={`h-1 bg-gradient-to-r ${exp.color}`} />
                   <div className="p-6 md:p-8">

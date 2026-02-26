@@ -28,11 +28,11 @@ export default function Skills() {
           {skillCategories.map((cat, i) => (
             <motion.div
               key={cat.title}
-              initial={{ opacity: 0, y: 30, rotate: -1 }}
-              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              whileHover={{ y: -5, scale: 1.02 }}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-30px' }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+              whileHover={{ y: -4, transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }}
               className={`glass rounded-2xl overflow-hidden card-glow rainbow-border transition-all duration-500 ${cat.border}`}
             >
               <div className={`h-1.5 bg-gradient-to-r ${cat.color}`} />

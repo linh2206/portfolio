@@ -28,11 +28,11 @@ export default function Projects() {
           {projects.map((p, i) => (
             <motion.div
               key={p.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              whileHover={{ y: -6 }}
+              viewport={{ once: true, margin: '-30px' }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+              whileHover={{ y: -5, transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }}
               className={`glass rounded-2xl overflow-hidden cursor-default card-glow rainbow-border transition-all duration-500 hover:shadow-xl ${p.hover}`}
             >
               <div className={`h-1.5 bg-gradient-to-r ${p.color}`} />
