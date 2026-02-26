@@ -8,14 +8,14 @@ export default function Education() {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="section-title">
-            Education & Certifications
+            <span className="gradient-text">Education & Certifications</span>
             <span className="section-line" />
           </h2>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-5 mt-12">
           <AnimatedSection delay={0.1}>
-            <div className="glass rounded-2xl p-7 hover:border-indigo-500/20 transition-all duration-500 h-full hover:glow-sm">
+            <div className="glass rounded-2xl p-7 card-glow rainbow-border transition-all duration-500 h-full">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/20 flex items-center justify-center shrink-0">
                   <span className="text-xl">🎓</span>
@@ -34,7 +34,7 @@ export default function Education() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
-            <div className="glass rounded-2xl p-7 hover:border-purple-500/20 transition-all duration-500 h-full hover:glow-sm">
+            <div className="glass rounded-2xl p-7 card-glow rainbow-border transition-all duration-500 h-full">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/20 flex items-center justify-center shrink-0">
                   <span className="text-xl">📜</span>

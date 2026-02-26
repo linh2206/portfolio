@@ -30,7 +30,7 @@ export default function Experience() {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="section-title">
-            <span className="gradient-text-cool">Experience</span>
+            <span className="gradient-text">Experience</span>
             <span className="section-line" />
           </h2>
         </AnimatedSection>

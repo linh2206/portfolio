@@ -1,47 +1,39 @@
 import type { Metadata } from 'next'
-import { DM_Sans, JetBrains_Mono } from 'next/font/google'
+import { Inter, Fira_Code } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ['latin', 'latin-ext'],
-  variable: '--font-dm-sans',
+  variable: '--font-inter',
   display: 'swap',
 })
 
-const jetbrainsMono = JetBrains_Mono({
+const firaCode = Fira_Code({
   subsets: ['latin'],
-  variable: '--font-jetbrains',
+  variable: '--font-fira',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: 'Le Hoai Linh | Full-stack Developer',
-  description: 'Full-stack Developer with 4+ years of experience across healthcare, education, e-commerce, media, and IoT. Node.js, Go, Laravel, React.js, NestJS, Next.js.',
+  description: 'Full-stack Developer with 4+ years of experience across healthcare, education, e-commerce, media, and IoT.',
   keywords: ['Full-stack Developer', 'React', 'Next.js', 'Node.js', 'NestJS', 'Laravel', 'Go', 'Portfolio'],
   authors: [{ name: 'Le Hoai Linh', url: 'https://github.com/linh2206' }],
-  icons: {
-    icon: '/portfolio/icon.svg',
-  },
+  icons: { icon: '/portfolio/icon.svg' },
   openGraph: {
     title: 'Le Hoai Linh | Full-stack Developer',
     description: 'Full-stack Developer with 4+ years of experience building scalable systems.',
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${firaCode.variable}`}>
       <body className="antialiased">
         <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

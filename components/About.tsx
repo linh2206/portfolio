@@ -16,7 +16,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="section-title">
-            <span className="gradient-text-cool">About Me</span>
+            <span className="gradient-text">About Me</span>
             <span className="section-line" />
           </h2>
         </AnimatedSection>

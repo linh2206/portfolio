@@ -18,10 +18,10 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="section-title">
-            <span className="gradient-text-cool">Skills</span>
+            <span className="gradient-text">Skills</span>
             <span className="section-line" />
           </h2>
-          <p className="text-slate-500 mb-16 max-w-2xl">Technologies I use to build modern, scalable applications.</p>
+          <p className="section-subtitle">Technologies I use to build modern, scalable applications.</p>
         </AnimatedSection>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
