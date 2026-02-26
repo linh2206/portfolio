@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -22,9 +23,12 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'glass py-3 shadow-lg shadow-black/20' : 'bg-transparent py-5'
+        scrolled ? 'glass-strong py-3 shadow-xl shadow-black/30' : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
@@ -32,22 +36,22 @@ export default function Navbar() {
           LHL
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-7">
           {navLinks.map((link, i) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-slate-400 hover:text-indigo-300 transition-colors text-sm font-medium relative group"
+              className="text-slate-500 hover:text-indigo-300 transition-all duration-300 text-sm font-medium relative group"
             >
-              <span className="text-indigo-400 font-mono text-xs mr-1">0{i + 1}.</span>
+              <span className="text-indigo-500 font-mono text-[11px] mr-1">0{i + 1}.</span>
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-indigo-400 group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-indigo-400 to-purple-400 group-hover:w-full transition-all duration-300" />
             </a>
           ))}
         </div>
 
         <button
-          className="md:hidden p-2 text-slate-400 hover:text-white transition-colors"
+          className="md:hidden p-2 text-slate-500 hover:text-white transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -61,23 +65,31 @@ export default function Navbar() {
         </button>
       </div>
 
-      {mobileMenuOpen && (
-        <div className="md:hidden glass mt-2 mx-4 rounded-xl p-4 shadow-xl shadow-black/30">
-          <div className="flex flex-col gap-1">
-            {navLinks.map((link, i) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-slate-400 hover:text-indigo-300 hover:bg-indigo-500/10 py-2.5 px-3 rounded-lg transition-all"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span className="text-indigo-400 font-mono text-xs mr-2">0{i + 1}.</span>
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden overflow-hidden"
+          >
+            <div className="glass-strong mx-4 mt-2 rounded-xl p-3">
+              {navLinks.map((link, i) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="block text-slate-400 hover:text-indigo-300 hover:bg-indigo-500/10 py-2.5 px-4 rounded-lg transition-all text-sm"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span className="text-indigo-500 font-mono text-[11px] mr-2">0{i + 1}.</span>
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   )
 }
