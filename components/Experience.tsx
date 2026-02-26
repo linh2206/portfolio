@@ -56,10 +56,7 @@ export default function Experience() {
                   transition={{ duration: 0.5, delay: i * 0.1 + 0.2, ease: [0.25, 0.1, 0.25, 1] }}
                 />
 
-                <motion.div
-                  className="glass rounded-2xl overflow-hidden card-glow rainbow-border transition-all duration-500"
-                  whileHover={{ x: 4, transition: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] } }}
-                >
+                <div className="glass rounded-2xl overflow-hidden card-glow rainbow-border transition-all duration-300 ease-out hover:border-indigo-500/20">
                   <div className={`h-1 bg-gradient-to-r ${exp.color}`} />
                   <div className="p-6 md:p-8">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
@@ -81,7 +78,7 @@ export default function Experience() {
                       {exp.tech.map((t) => <span key={t} className="tech-tag">{t}</span>)}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </motion.div>
             ))}
           </div>
