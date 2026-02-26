@@ -80,7 +80,6 @@ export default function Experience() {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="section-title">
-            <span className="text-indigo-400 font-mono text-lg">02.</span>
             Experience
             <span className="section-line" />
           </h2>

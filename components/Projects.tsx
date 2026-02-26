@@ -48,7 +48,6 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="section-title">
-            <span className="text-indigo-400 font-mono text-lg">03.</span>
             Projects
             <span className="section-line" />
           </h2>

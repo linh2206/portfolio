@@ -43,7 +43,6 @@ export default function Navbar() {
               href={link.href}
               className="text-slate-500 hover:text-indigo-300 transition-all duration-300 text-sm font-medium relative group"
             >
-              <span className="text-indigo-500 font-mono text-[11px] mr-1">0{i + 1}.</span>
               {link.label}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-indigo-400 to-purple-400 group-hover:w-full transition-all duration-300" />
             </a>
@@ -82,7 +81,6 @@ export default function Navbar() {
                   className="block text-slate-400 hover:text-indigo-300 hover:bg-indigo-500/10 py-2.5 px-4 rounded-lg transition-all text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <span className="text-indigo-500 font-mono text-[11px] mr-2">0{i + 1}.</span>
                   {link.label}
                 </a>
               ))}

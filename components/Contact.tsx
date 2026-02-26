@@ -12,7 +12,7 @@ export default function Contact() {
 
       <div className="max-w-2xl mx-auto text-center relative z-10">
         <AnimatedSection>
-          <p className="text-indigo-400 font-mono text-sm mb-4 tracking-wider">06. What&apos;s Next?</p>
+          <p className="text-indigo-400 font-mono text-sm mb-4 tracking-wider">What&apos;s Next?</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="gradient-text">Get In Touch</span>
           </h2>

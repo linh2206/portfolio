@@ -8,7 +8,6 @@ export default function Education() {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="section-title">
-            <span className="text-indigo-400 font-mono text-lg">05.</span>
             Education & Certifications
             <span className="section-line" />
           </h2>
