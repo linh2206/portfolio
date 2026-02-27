@@ -48,7 +48,7 @@ export default function Contact() {
           <div className="mt-14 flex flex-col sm:flex-row gap-6 justify-center text-sm">
             <span className="flex items-center gap-2 justify-center text-cyan-400/70">✉️ lehoailinh2206@gmail.com</span>
             <span className="flex items-center gap-2 justify-center text-violet-400/70">📞 +84 97 264 5991</span>
-            <span className="flex items-center gap-2 justify-center text-pink-400/70">📍 Ho Chi Minh City</span>
+            <span className="flex items-center gap-2 justify-center text-pink-400/70">📍 Ho Chi Minh City, Vietnam</span>
           </div>
         </AnimatedSection>
       </div>

@@ -5,11 +5,11 @@ import AnimatedSection from './AnimatedSection'
 
 const skillCategories = [
   { title: 'Languages', icon: '⚡', items: ['JavaScript', 'TypeScript', 'PHP', 'Python', 'Go'], color: 'from-cyan-400 to-blue-500', border: 'hover:border-cyan-500/30' },
-  { title: 'Frontend', icon: '🎨', items: ['ReactJS', 'NextJS', 'Redux', 'Tailwind', 'Bootstrap', 'Ant Design', 'MUI'], color: 'from-violet-400 to-purple-500', border: 'hover:border-violet-500/30' },
+  { title: 'Frontend', icon: '🎨', items: ['ReactJS', 'NextJS', 'Redux', 'Tailwind CSS', 'Bootstrap', 'Ant Design', 'MUI', 'Figma'], color: 'from-violet-400 to-purple-500', border: 'hover:border-violet-500/30' },
   { title: 'Backend', icon: '⚙️', items: ['NodeJS', 'NestJS', 'Laravel', 'Express'], color: 'from-pink-400 to-rose-500', border: 'hover:border-pink-500/30' },
   { title: 'Mobile', icon: '📱', items: ['Flutter', 'React Native'], color: 'from-emerald-400 to-teal-500', border: 'hover:border-emerald-500/30' },
   { title: 'Database', icon: '🗄️', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'], color: 'from-amber-400 to-orange-500', border: 'hover:border-amber-500/30' },
-  { title: 'DevOps', icon: '🚀', items: ['Docker', 'Jenkins', 'Bash', 'GitHub Actions', 'Grafana', 'AWS'], color: 'from-rose-400 to-pink-500', border: 'hover:border-rose-500/30' },
+  { title: 'DevOps', icon: '🚀', items: ['Docker', 'Jenkins', 'Bash', 'GitHub Actions', 'VMware ESXi', 'Grafana', 'Multivisor', 'Git', 'Ubuntu', 'AWS'], color: 'from-rose-400 to-pink-500', border: 'hover:border-rose-500/30' },
 ]
 
 export default function Skills() {

@@ -29,7 +29,7 @@ export default function About() {
             </p>
             <p className="text-slate-400 leading-relaxed">
               Proficient in <span className="text-cyan-300">Node.js</span>, <span className="text-violet-300">Go</span>, <span className="text-pink-300">Laravel</span>, <span className="text-blue-300">React.js</span>, <span className="text-purple-300">NestJS</span>, <span className="text-orange-300">Next.js</span>. 
-              Passionate about building scalable systems and learning new technologies.
+              Passionate about building scalable systems and learning new technologies such as <span className="text-emerald-300">Flutter</span> and <span className="text-sky-300">React Native</span>.
             </p>
             <p className="text-slate-400 leading-relaxed">
               When I&apos;m not coding, you&apos;ll find me on the soccer field ⚽ or enjoying music 🎵
